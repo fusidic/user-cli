@@ -16,10 +16,10 @@ func main() {
 
 	cmd.Init()
 
-	// Create new greeter client
-	client := pb.NewUserServiceClient("go.micro.srv.user", microclient.DefaultClient)
+	// 创建 user-service 服务的客户端
+	client := pb.NewUserServiceClient("user", microclient.DefaultClient)
 
-	// Define our flags
+	// 设置命令行调用的参数
 	service := micro.NewService(
 		micro.Flags(
 			cli.StringFlag{
