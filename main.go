@@ -51,6 +51,13 @@ func main() {
 			password := c.String("password")
 			company := c.String("company")
 
+			if name == "" {
+				name = "blank"
+				email = "test@blank"
+				password = "blank"
+				company = "BLANK"
+				log.Printf("unlucky :( name:%s email:%s password:%s company:%s", name, email, password, company)
+			}
 			// Call our user service
 			r, err := client.Create(context.TODO(), &pb.User{
 				Name:     name,

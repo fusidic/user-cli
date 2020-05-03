@@ -24,4 +24,5 @@ WORKDIR /app
 COPY --from=builder /app/user-cli .
 
 RUN chmod +x ./user-cli
+ENTRYPOINT [ "./user-cli" ]
 CMD ["./user-cli"]
