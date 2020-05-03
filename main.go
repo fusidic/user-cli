@@ -8,7 +8,6 @@ import (
 	pb "github.com/fusidic/user-service/proto/user"
 	"github.com/micro/go-micro"
 	microclient "github.com/micro/go-micro/client"
-	"github.com/prometheus/common/log"
 )
 
 func main() {
